@@ -13,7 +13,7 @@ void add(int n, float *x, float *y)
 int main(void)
 {
     // Number of elements in the arrays
-    int N = 1 << 24; // 1M elements
+    int N = 1 << 29; // 1M elements
 
     // Allocate memory for arrays on the host
     float *x = new float[N];

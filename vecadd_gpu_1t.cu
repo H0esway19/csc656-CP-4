@@ -10,7 +10,7 @@ __global__ void add(int n, float *x, float *y)
 
 int main(void)
 {
-    int N = 1 << 20;
+    int N = 1 << 29;
     float *x, *y;
 
     // Allocate Unified Memory – accessible from CPU or GPU
@@ -33,7 +33,7 @@ int main(void)
     // Check for errors (all values should be 3.0f)
     float maxError = 0.0f;
     for (int i = 0; i < N; i++)
-        maxError = fmax(maxError, fabs(y[i] - 3.0f));
+    maxError = fmax(maxError, fabs(y[i] - 3.0f));
     std::cout << "Max error: " << maxError << std::endl;
     
     // Free memory
